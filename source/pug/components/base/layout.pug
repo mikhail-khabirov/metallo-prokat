@@ -1,0 +1,47 @@
+doctype html
+
+include ../components
+
+block variables
+
+html.page(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    //- Написать описание проекта
+    meta(name="description" content="Описание проекта")
+
+    //- Фавиконки
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials"/>
+
+    if (openGraf)
+      //- Обязательно измените содержание контента на то, что необходимо!
+      //- Введите заголовок
+      meta(property="og:title" content="Название проекта")
+      //- Введите путь к картинке
+      meta(property="og:image" content="")
+      //- Введите необходимый тип
+      meta(property="og:type" content="article")
+      //- Введите адрес сайта
+      meta(property="og:url" content="")
+      //- Введите описание
+      meta(property="og:description" content="Описание проекта")
+
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body.page__body
+    if (hasHeader)
+      +header(currentUrl)
+
+    block main
+
+    if (hasFooter)
+      +footer()
+
+    //- Написать путь до скрипта
+    script(src="./js/script.js")

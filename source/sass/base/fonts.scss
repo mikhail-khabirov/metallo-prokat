@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/") format("woff2"),
+    url("./fonts/") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts") format("woff2"),
+    url("./fonts/") format("woff");
+  font-display: swap;
+}

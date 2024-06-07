@@ -1,0 +1,43 @@
+mixin header(currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: ""
+      },
+      {
+        href: "#",
+        text: ""
+      },
+      {
+        href: "#",
+        text: ""
+      },
+      {
+        href: "#",
+        text: ""
+      },
+      {
+        href: "#",
+        text: ""
+      }
+    ]
+
+  header.header
+    if(currentUrl === "index.html")
+      //- lighthouse снимает 10 баллов SEO за <a> без href
+      span.header__logo
+        //- Указать директорию, название файла, разширение, ширину, высоту и alt
+        +img()
+    else
+      a.header__logo(href="index.html" aria-label="Переход на главную")
+        +img()
+    nav.main-nav
+      ul.main-nav__list
+        each link in headerLinks
+          - const activeState = currentUrl === link.href
+          li.main-nav__item
+            if(activeState)
+              span.main-nav__link.main-nav__link--is-current= link.text
+            else
+              a.main-nav__link(href=link.href)= link.text
