@@ -1,0 +1,15 @@
+.button {
+  position: relative;
+  padding: 0;
+  width: 207px;
+  height: 62px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
