@@ -1,43 +1,66 @@
 mixin header(currentUrl)
   -
-    const headerLinks = [
+    const headerTopLinks = [
       {
         href: "#",
-        text: ""
+        text: "О компании"
       },
       {
         href: "#",
-        text: ""
+        text: "Контакты"
       },
       {
         href: "#",
-        text: ""
+        text: "Вопрос-ответ"
+      },
+    ]
+
+    const headerBottomLinks = [
+      {
+        href: "#",
+        text: "Каталог продукции"
       },
       {
         href: "#",
-        text: ""
+        text: "Гибка металла"
       },
       {
         href: "#",
-        text: ""
-      }
+        text: "Резка"
+      },
+      {
+        href: "#",
+        text: "Доставка"
+      },
+
     ]
 
   header.header
-    if(currentUrl === "index.html")
-      //- lighthouse снимает 10 баллов SEO за <a> без href
-      span.header__logo
-        //- Указать директорию, название файла, разширение, ширину, высоту и alt
-        +img()
-    else
-      a.header__logo(href="index.html" aria-label="Переход на главную")
-        +img()
-    nav.main-nav
-      ul.main-nav__list
-        each link in headerLinks
-          - const activeState = currentUrl === link.href
-          li.main-nav__item
-            if(activeState)
-              span.main-nav__link.main-nav__link--is-current= link.text
-            else
+    .header__container.container
+      nav.main-nav
+        ul.main-nav__list
+          each link in headerTopLinks
+            li.main-nav__item
               a.main-nav__link(href=link.href)= link.text
+      span.header__city Екатеринбург
+
+    .header__container.container
+      if(currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href
+        span.logo
+          //- Указать директорию, название файла, раcширение, ширину, высоту и alt
+          +img("logo__image", "images", "logo","png", "272", "71", "Логотип Сталь Урала." )
+      else
+        a.logo(href="index.html" aria-label="Переход на главную")
+          +img("logo__image", "images", "logo","png", "272", "71", "Логотип Сталь Урала." )
+      nav.secondary-nav
+        ul.secondary-nav__list
+          each link in headerBottomLinks
+            li.secondary-nav__item
+              a.secondary-nav__link(href=link.href)= link.text
+      .header__info-for-user
+        span.header__phone +7 (343) 319-19-15
+        span.header__search
+          span.visually-hidden Поиск по сайту
+        span.header__cart
+          span.visually-hidden Корзина

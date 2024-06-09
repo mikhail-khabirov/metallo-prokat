@@ -1,0 +1,89 @@
+mixin catalog()
+  -
+    const catalogCategories = [
+      {
+        active: true,
+        text: "Металлопрокат"
+      },
+      {
+        active: false,
+        text: "Заборы и ограждения"
+      },
+      {
+        active: false,
+        text: "Кровля"
+      },
+      {
+        active: false,
+        text: "Профнастил"
+      },
+      {
+        active: false,
+        text: "Фасад"
+      }
+    ]
+
+    const catalogItems = [
+      {
+        text: "Арматура",
+        name: "armature"
+      },
+      {
+        text: "Трубы",
+        name: "tubes"
+      },
+      {
+        text: "Лист стальной",
+        name: "sheet"
+      },
+      {
+        text: "Нержавеющий прокат",
+        name: "stainless"
+      },
+      {
+        text: "Цветной прокат",
+        name: "color-metal"
+      },
+      {
+        text: "Сортовой прокат",
+        name: "sort-metal"
+      },
+      {
+        text: "Изделия из арматуры",
+        name: "armature-things"
+      },
+      {
+        text: "Сетка",
+        name: "net"
+      },
+      {
+        text: "Лента металлическая",
+        name: "tape"
+      },
+      {
+        text: "Крепеж",
+        name: "fastener"
+      },
+      {
+        text: "Фасонный прокат",
+        name: "fason"
+      }
+    ]
+
+  section.catalog
+    .container
+      h2.title Каталог продукции
+      ul.catalog__categories
+        each link in catalogCategories
+          - const activeState = link.active === true
+          li.catalog__categories-item
+            if(activeState)
+              a.catalog__categories-link.catalog__categories-link--active= link.text
+            else
+              a.catalog__categories-link= link.text
+      ul.catalog__products
+        each item in catalogItems
+          li.catalog__products-item
+            +img("catalog__image", "images", item.name, "jpg", "424", "227", "")
+            p.catalog__products__text= item.text
+

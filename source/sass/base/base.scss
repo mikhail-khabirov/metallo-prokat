@@ -15,9 +15,10 @@ body {
   padding: 0;
 
   font-family: $ff-primary;
+  font-weight: 400;
   font-size: 14px;
-  color: $var-1;
-  line-height: 1;
+  color: $var-2;
+  line-height: auto;
 
   background-color: $primary-white;
 }

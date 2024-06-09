@@ -1,0 +1,31 @@
+mixin statistics()
+  -
+    const statInfo = [
+      {
+        num: "25 000",
+        text: "тонн металлопроката",
+        desc: "Отгружаем ежегодно"
+      },
+      {
+        num: "17 600",
+        text: "единиц металлопроката",
+        desc: "Сортамент"
+      },
+      {
+        num: "11 300",
+        text: "новых клиентов",
+        desc: "В год"
+      }
+    ]
+
+  section.statistics
+    .statistics__container
+      h2.visually-hidden Наши показатели
+      dl.statistics__list
+        each item in statInfo
+          .statistics__wrapper
+            dt.statistics__fact
+              span.statistics__number= item.num
+              span.statistics__text= item.text
+            dd.statistics__definition
+              p.statistics__desc= item.desc

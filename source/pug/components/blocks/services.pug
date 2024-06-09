@@ -1,0 +1,33 @@
+mixin services()
+  -
+    const servicesList = [
+      {
+        name: "metal-bend",
+        title: "Гибка металла",
+        text: "Работаем с заготовками различной толщины и диаметра.",
+        alt: "процесс сгибания металла."
+      },
+      {
+        name: "metal-cut",
+        title: "Резка металла",
+        text: "Работаем с заготовками различной толщины и диаметра.",
+        alt: "процесс резки металла."
+      },
+      {
+        name: "delivery",
+        title: "Доставка",
+        text: "Работаем с заготовками различной толщины и диаметра.",
+        alt: "Грузовик, везущий металл."
+      },
+    ]
+
+  section.services
+    .container
+      h2.title Услуги
+      ul.services__list
+        each item in servicesList
+          li.services__item
+            +img("serivces__image", "images", item.name, "jpg", "580", "261", item.alt)
+            h3.services__title= item.title
+            p.services__text= item.text
+
