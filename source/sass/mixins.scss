@@ -3,3 +3,10 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin font($font-size, $color, $line-height, $font-weight) {
+  font-size: $font-size;
+  color: $color;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

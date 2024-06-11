@@ -1,0 +1,91 @@
+.header__top-container {
+  background-color: rgba($primary-black, 0.4);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+
+.header__bottom-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.header__city {
+  width: 131px;
+  color: $primary-white;
+  text-decoration: underline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before {
+    content: "";
+    background-image: url("../img/svg/location-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.header__logo {
+  margin-right: 404px;
+}
+
+.header__info-for-user {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone {
+  margin-right: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba($primary-white, 0.8);
+}
+
+.header__search {
+  margin-right: 16px;
+  width: 28px;
+  height: 28px;
+  background-image: url("../img/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__cart {
+  position: relative;
+  display: flex;
+  margin-right: 17px;
+  width: 28px;
+  height: 28px;
+  background-image: url("../img/svg/shop-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__cart-number {
+  position: absolute;
+  left: 17px;
+  top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  font-family: $ff-secondary;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba($primary-white, 0.8);
+  background-color: $var-1;
+}
+
+.header__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba($primary-white, 0.8);
+}

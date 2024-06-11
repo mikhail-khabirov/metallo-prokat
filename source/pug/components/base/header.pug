@@ -36,7 +36,7 @@ mixin header(currentUrl)
     ]
 
   header.header
-    .header__container.container
+    .header__top-container.container
       nav.main-nav
         ul.main-nav__list
           each link in headerTopLinks
@@ -44,14 +44,14 @@ mixin header(currentUrl)
               a.main-nav__link(href=link.href)= link.text
       span.header__city Екатеринбург
 
-    .header__container.container
+    .header__bottom-container.container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.logo
+        span.header__logo.logo
           //- Указать директорию, название файла, раcширение, ширину, высоту и alt
           +img("logo__image", "images", "logo","png", "272", "71", "Логотип Сталь Урала." )
       else
-        a.logo(href="index.html" aria-label="Переход на главную")
+        a.header__logo.logo(href="index.html" aria-label="Переход на главную")
           +img("logo__image", "images", "logo","png", "272", "71", "Логотип Сталь Урала." )
       nav.secondary-nav
         ul.secondary-nav__list
@@ -64,3 +64,5 @@ mixin header(currentUrl)
           span.visually-hidden Поиск по сайту
         span.header__cart
           span.visually-hidden Корзина
+          span.header__cart-number 1
+        span.header__price 12 750 ₽

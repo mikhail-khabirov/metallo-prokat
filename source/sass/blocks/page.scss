@@ -1,0 +1,12 @@
+.page__body {
+  background-image: url("../img/intro-background.jpg");
+  /* stylelint-disable */
+  background-image: image-set(
+    url("../img/images/intro-background.webp") 1x,
+    url("../img/images/intro-background@2x.webp") 2x,
+    url("../img/images/intro-background.jpeg") 1x,
+    url("../img/images/intro-background@2x.jpeg") 2x
+  );
+  /* stylelint-enable */
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,11 @@
+.main-nav__list {
+  @include list-reset();
+  display: flex;
+  max-width: 1000px;
+  gap: 52px;
+}
+
+.main-nav__link {
+  color: $primary-white;
+  text-decoration: none;
+}
