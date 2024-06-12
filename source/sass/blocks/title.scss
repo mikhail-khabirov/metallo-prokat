@@ -1,0 +1,18 @@
+.title {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $var-2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: $var-1;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}

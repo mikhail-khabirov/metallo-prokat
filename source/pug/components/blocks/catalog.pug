@@ -72,15 +72,15 @@ mixin catalog()
 
   section.catalog
     .container
-      h2.title Каталог продукции
+      h2.catalog__title.title Каталог продукции
       ul.catalog__categories
         each link in catalogCategories
           - const activeState = link.active === true
           li.catalog__categories-item
             if(activeState)
-              a.catalog__categories-link.catalog__categories-link--active= link.text
+              a.catalog__categories-link.catalog__categories-link--active(href="#")= link.text
             else
-              a.catalog__categories-link= link.text
+              a.catalog__categories-link(href="#")= link.text
       ul.catalog__products
         each item in catalogItems
           li.catalog__products-item

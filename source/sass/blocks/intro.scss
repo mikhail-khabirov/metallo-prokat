@@ -1,0 +1,45 @@
+.intro {
+  padding: 148px 0 267px;
+}
+
+.intro__title {
+  margin: 0 auto;
+  position: relative;
+  font-size: 62px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-white;
+  text-align: center;
+  width: 574px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 49px;
+    height: 1px;
+    background-color: rgba($primary-white, 0.5);
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: $primary-white;
+    width: 64px;
+  }
+}
+
+.intro__title-accent {
+  color: $var-1;
+}
+
+.intro__title-city {
+  display: block;
+  margin: 36px 0 0;
+  font-size: 24px;
+  text-transform: none;
+}
