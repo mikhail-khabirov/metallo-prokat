@@ -36,13 +36,14 @@ mixin header(currentUrl)
     ]
 
   header.header
-    .header__top-container.container
-      nav.main-nav
-        ul.main-nav__list
-          each link in headerTopLinks
-            li.main-nav__item
-              a.main-nav__link(href=link.href)= link.text
-      span.header__city Екатеринбург
+    .header__top-container
+      .header__top-container-inner.container
+        nav.main-nav
+          ul.main-nav__list
+            each link in headerTopLinks
+              li.main-nav__item
+                a.main-nav__link(href=link.href)= link.text
+        span.header__city Екатеринбург
 
     .header__bottom-container.container
       if(currentUrl === "index.html")

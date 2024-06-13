@@ -1,6 +1,8 @@
 .header__top-container {
   background-color: rgba($primary-black, 0.4);
+}
 
+.header__top-container-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;

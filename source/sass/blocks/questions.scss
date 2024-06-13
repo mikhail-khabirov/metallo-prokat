@@ -1,0 +1,57 @@
+.questions__container {
+  position: relative;
+  max-width: 1828px;
+  padding: 54px 0 70px;
+  display: flex;
+  background-color: $var-4;
+
+  &::before {
+    @include pseudo();
+    background-image: url("../img/svg/pipe-sketch-coloured.svg");
+    width: 269px;
+    height: 132px;
+    top: 37px;
+    left: 895px;
+  }
+}
+
+.questions__wrapper {
+  margin: 0 600px 0 170px;
+  width: 614px;
+}
+
+.questions__slogan {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.58;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $var-1;
+}
+
+.questions__text {
+  margin: 0 0 0 0;
+  font-size: 24px;
+  line-height: 1.58;
+  font-weight: 400;
+  color: $var-2;
+}
+
+.questions__button-container {
+  position: relative;
+  display: flex;
+
+  &::before {
+    @include pseudo();
+    background-image: url("../img/svg/logo-decoration.svg");
+    width: 162px;
+    height: 163px;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.questions__button {
+  margin-top: 15px;
+}

@@ -1,15 +1,36 @@
 .button {
   position: relative;
+  font-family: $ff-primary;
+  line-height: 2.71;
+  text-transform: uppercase;
+  color: $primary-white;
   padding: 0;
   width: 207px;
   height: 62px;
   border: none;
+  background-image: url("../img/svg/button-green-background.svg");
   background-color: transparent;
   cursor: pointer;
 
-  svg {
+  &::after {
+    content: "";
     position: absolute;
-    top: 0;
+    width: 2px;
+    height: 21px;
+    background-color: $primary-white;
+    right: 0;
+    top: 48%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 21px;
+    background-color: $primary-white;
     left: 0;
+    top: 48%;
+    transform: translateY(-50%);
   }
 }
