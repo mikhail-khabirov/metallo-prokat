@@ -1,0 +1,38 @@
+.about-company {
+  padding: 40px 0 70px;
+}
+
+.about-company__container {
+  display: flex;
+}
+
+.about-company__image {
+  margin-left: 156px;
+}
+
+.about-company__wrappper {
+  width: 470px;
+  margin-left: 76px;
+}
+
+.about-company__title {
+  margin: 44px 0 16px;
+  width: 212px;
+  padding-right: 20px;
+  font-weight: 500;
+  text-transform: none;
+
+  &::after {
+    top: 50%;
+    left: unset;
+    transform: translateY(-50%), rotate(45deg);
+    right: 0;
+  }
+}
+
+.about-company__text {
+  margin: 0 0 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+}

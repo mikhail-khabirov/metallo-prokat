@@ -33,4 +33,17 @@
     top: 48%;
     transform: translateY(-50%);
   }
+
+  &--secondary {
+    color: $var-2;
+    background-image: url("../img/svg/button-white-background.svg");
+
+    &::after {
+      background-color: $var-1;
+    }
+
+    &::before {
+      background-color: $var-1;
+    }
+  }
 }

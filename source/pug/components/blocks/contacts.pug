@@ -1,12 +1,12 @@
 mixin contacts()
   section.contacts
     .container
-      h2.title Контакты
+      h2.contacts__title.title Контакты
       .contacts__wrapper
         +img("contacts__map", "images", "map", "jpg", "1360", "454", "Местоположение Сталь Урала на карте")
         .contacts__address-wrapper
           h3.contacts__address-title Мы находимся по адресу
-          p.contacts__address 620010, Свердловская область,г. Екатеринбург, ЕКАД 5 км, строение № 6В, помещение № 311.
+          p.contacts__address 620010, Свердловская область, <br> г. Екатеринбург, ЕКАД 5 км, строение № 6В, помещение № 311.
           span.contacts__phone 8 (343) 319-19-15
           span.contacts__schedule 9:00 - 20:00
           span.contacts__email info@stalurala.ru
