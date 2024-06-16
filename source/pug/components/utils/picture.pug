@@ -1,0 +1,8 @@
+mixin picture(className, path, image, imageDesktop, imageMobile, format, width, height, altText)
+  picture
+    source(media="max-width: 767px", type="image/webp" srcset="img/" + path + "/" + imageMobile + ".webp" + ", " + "img/" + path + "/" + imageDesktop + "@2x.webp" + " 2x")
+    source(media="max-width: 767px", srcset="img/" + path + "/" + imageMobile + "." + format + ", " + "img/" + path + "/" + imageMobile + "." + format + " 2x")
+    source(media="max-width: 1919px", type="image/webp" srcset="img/" + path + "/" + imageDesktop + ".webp" + ", " + "img/" + path + "/" + imageDesktop + "@2x.webp" + " 2x")
+    source(media="max-width: 1919px", srcset="img/" + path + "/" + imageDesktop + "." + format + ", " + "img/" + path + "/" + imageDesktop + "." + format + " 2x")
+    source(type="image/webp" srcset="img/" + path + "/" + image + ".webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x")
+    img(class= className, src="img/" + path + "/" + image + "." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText)

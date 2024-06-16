@@ -5,6 +5,10 @@
   display: flex;
   background-color: $var-4;
 
+  @media (max-width: $desktop) {
+    margin: 0 46px 0;
+  }
+
   &::before {
     @include pseudo();
     background-image: url("../img/svg/pipe-sketch-coloured.svg");
@@ -12,12 +16,21 @@
     height: 132px;
     top: 37px;
     left: 895px;
+
+    @media (max-width: $desktop) {
+      left: 655px;
+    }
   }
 }
 
 .questions__wrapper {
   margin: 0 600px 0 170px;
   width: 614px;
+
+  @media (max-width: $desktop) {
+    margin: 0 444px 0 116px;
+    width: 465px;
+  }
 }
 
 .questions__slogan {

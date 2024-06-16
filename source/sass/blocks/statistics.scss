@@ -13,6 +13,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 180px 399px;
+
+  @media (max-width: $desktop) {
+    max-width: 1116px;
+    gap: 180px 201px;
+  }
 }
 
 .statistics__wrapper {
@@ -26,6 +31,10 @@
     background-color: #dcdcdd;
     right: -188px;
     top: -46px;
+
+    @media (max-width: $desktop) {
+      right: -65px;
+    }
   }
 
   &::after {

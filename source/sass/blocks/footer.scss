@@ -20,6 +20,11 @@
   flex-direction: column;
   padding: 42px 0 0 46px;
 
+  @media (max-width: $desktop) {
+    max-width: 426px;
+    padding-left: 0;
+  }
+
   &::after {
     @include pseudo();
     width: calc(100% - 46px);
@@ -27,6 +32,10 @@
     background-color: rgba($primary-white, 0.5);
     right: 0;
     bottom: 51px;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+    }
   }
 }
 
@@ -74,6 +83,11 @@
   width: 1352px;
   display: flex;
 
+  @media (max-width: $desktop) {
+    max-width: 884px;
+    padding-left: 84px;
+  }
+
   &::before {
     @include pseudo();
     width: calc(100% - 46px);
@@ -81,6 +95,10 @@
     background-color: rgba($primary-white, 0.5);
     left: 0;
     bottom: 18px;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+    }
   }
 
 
@@ -91,11 +109,19 @@
     background-image: url("../img/svg/pipe-sketch.svg");
     top: 188px;
     right: 20px;
+
+    @media (max-width: $desktop) {
+      right: -26px;
+    }
   }
 }
 
 .footer__links-list-wrapper:not(:last-of-type) {
   margin-right: 214px;
+
+  @media (max-width: $desktop) {
+    margin-right: 73px;
+  }
 }
 
 .footer__links {
@@ -131,6 +157,10 @@
 
 .footer__button {
   margin-left: 202px;
+
+  @media (max-width: $desktop) {
+    margin-left: 89px;
+  }
 }
 
 .footer__policy {

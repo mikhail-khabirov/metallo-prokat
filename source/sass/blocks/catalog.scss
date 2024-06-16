@@ -21,6 +21,10 @@
   border: 1px solid $var-3;
   text-align: center;
   flex-grow: 1;
+
+  @media (max-width: $desktop) {
+    width: 265px;
+  }
 }
 
 .catalog__categories-link {
@@ -32,9 +36,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $var-2;
+  opacity: 0.6;
+
+  @media (max-width: $desktop) {
+    padding: 35px 40px;
+  }
 }
 
 .catalog__categories-link--active {
+  opacity: 1;
+
   &::before {
     content: "";
     position: absolute;
@@ -57,6 +68,10 @@
   width: 424px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $desktop) {
+    width: 304px;
+  }
 }
 
 .catalog__products__text {

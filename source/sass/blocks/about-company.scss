@@ -1,5 +1,5 @@
 .about-company {
-  padding: 40px 0 70px;
+  padding: 70px 0 40px;
 }
 
 .about-company__container {
@@ -8,6 +8,11 @@
 
 .about-company__image {
   margin-left: 156px;
+
+  @media (max-width: $desktop) {
+    width: 568px;
+    margin-left: 116px;
+  }
 }
 
 .about-company__wrappper {

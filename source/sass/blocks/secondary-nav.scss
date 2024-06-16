@@ -1,10 +1,15 @@
 .secondary-nav__list {
   @include list-reset();
-  max-width: 600px;
+  width: 500px;
   display: flex;
+  flex-wrap: wrap;
   margin-right: 318px;
   gap: 28px;
   align-items: center;
+
+  @media (max-width: $desktop) {
+    margin-right: 78px;
+  }
 }
 
 .secondary-nav__link {

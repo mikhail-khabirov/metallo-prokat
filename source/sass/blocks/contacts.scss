@@ -2,6 +2,14 @@
   padding: 128px 0 97px;
 }
 
+.contacts__map {
+  @media (max-width: $desktop) {
+    width: 884px;
+    height: 454px;
+    object-fit: cover;
+  }
+}
+
 .contacts__title {
   margin: 0 auto 40px;
   width: 185px;
