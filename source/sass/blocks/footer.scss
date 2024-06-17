@@ -25,6 +25,10 @@
     padding-left: 0;
   }
 
+  @media (max-width: $desktop-sm) {
+    max-width: 300px;
+  }
+
   &::after {
     @include pseudo();
     width: calc(100% - 46px);
@@ -88,6 +92,11 @@
     padding-left: 84px;
   }
 
+  @media (max-width: $desktop-sm) {
+    max-width: 649px;
+    padding-bottom: 117px;
+  }
+
   &::before {
     @include pseudo();
     width: calc(100% - 46px);
@@ -100,7 +109,6 @@
       width: 100%;
     }
   }
-
 
   &::after {
     @include pseudo();
@@ -121,6 +129,10 @@
 
   @media (max-width: $desktop) {
     margin-right: 73px;
+  }
+
+  @media (max-width: $desktop-sm) {
+    margin-right: 50px;
   }
 }
 
@@ -160,6 +172,11 @@
 
   @media (max-width: $desktop) {
     margin-left: 89px;
+  }
+
+  @media (max-width: $desktop-sm) {
+    margin-left: 20px;
+    flex-shrink: 0;
   }
 }
 

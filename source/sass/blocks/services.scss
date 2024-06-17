@@ -26,6 +26,10 @@
     width: 420px;
   }
 
+  @media (max-width: $desktop-sm) {
+    width: 287px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -73,6 +77,12 @@
     width: 318px;
     margin: 0 0 0 51px;
   }
+
+  @media (max-width: $desktop-sm) {
+    padding-top: 140px;
+    margin-left: 20px;
+    width: 250px;
+  }
 }
 
 .services__text {
@@ -86,5 +96,10 @@
   @media (max-width: $desktop) {
     width: 320px;
     margin-left: 49px;
+  }
+
+  @media (max-width: $desktop-sm) {
+    width: 250px;
+    margin-left: 20px;
   }
 }

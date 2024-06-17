@@ -10,6 +10,18 @@
   /* stylelint-enable */
   background-repeat: no-repeat;
   background-size: 100% 704px;
+
+  @media (max-width: $desktop-sm) {
+    background-image: url("../img/intro-background-1440.jpg");
+    /* stylelint-disable */
+    background-image: image-set(
+      url("../img/images/intro-background-1440.webp") 1x,
+      url("../img/images/intro-background-1440@2x.webp") 2x,
+      url("../img/images/intro-background-1440.jpeg") 1x,
+      url("../img/images/intro-background-1440@2x.jpeg") 2x
+    );
+    /* stylelint-enable */
+  }
 }
 
 .page__header {

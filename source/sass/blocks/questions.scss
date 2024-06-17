@@ -6,30 +6,44 @@
   background-color: $var-4;
 
   @media (max-width: $desktop) {
-    margin: 0 46px 0;
+    margin: 0 46px;
+    justify-content: center;
   }
+
+  @media (max-width: $desktop-sm) {
+    margin: 0 25px;
+  }
+}
+
+.questions__wrapper {
+  position: relative;
+  margin: 0 600px 0 170px;
+  width: 614px;
 
   &::before {
     @include pseudo();
     background-image: url("../img/svg/pipe-sketch-coloured.svg");
     width: 269px;
     height: 132px;
-    top: 37px;
-    left: 895px;
+    top: -17px;
+    right: -379px;
 
     @media (max-width: $desktop) {
-      left: 655px;
+      right: -343px;
+    }
+
+    @media (max-width: $desktop-sm) {
+      right: -262px;
     }
   }
-}
-
-.questions__wrapper {
-  margin: 0 600px 0 170px;
-  width: 614px;
 
   @media (max-width: $desktop) {
     margin: 0 444px 0 116px;
     width: 465px;
+  }
+
+  @media (max-width: $desktop-sm) {
+    margin: 0 260px 0 25px;
   }
 }
 
@@ -67,4 +81,8 @@
 
 .questions__button {
   margin-top: 15px;
+
+  @media (max-width: $desktop-sm) {
+    margin-right: 25px;
+  }
 }

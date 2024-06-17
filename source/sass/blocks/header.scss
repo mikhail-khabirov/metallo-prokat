@@ -13,6 +13,11 @@
   margin-top: 5px;
   display: flex;
   align-items: center;
+
+  @media (max-width: $desktop-sm) {
+    margin-top: 15px;
+    justify-content: space-between;
+  }
 }
 
 .header__city {
@@ -41,11 +46,23 @@
   @media (max-width: $desktop) {
     margin-right: 164px;
   }
+
+  @media (max-width: $desktop-sm) {
+    width: 200px;
+    margin-right: 0;
+  }
 }
 
 .header__info-for-user {
   display: flex;
   align-items: center;
+
+  @media (max-width: $desktop-sm) {
+    width: 155px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+  }
 }
 
 .header__phone {
@@ -54,6 +71,10 @@
   font-weight: 700;
   color: rgba($primary-white, 0.8);
   flex-shrink: 0;
+
+  @media (max-width: $desktop-sm) {
+    margin-right: 0;
+  }
 }
 
 .header__search {

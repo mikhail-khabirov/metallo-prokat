@@ -1,5 +1,9 @@
 .catalog {
   padding: 64px 0 102px;
+
+  @media (max-width: $desktop-sm) {
+    padding-bottom: 60px;
+  }
 }
 
 .catalog__title {
@@ -41,6 +45,10 @@
   @media (max-width: $desktop) {
     padding: 35px 40px;
   }
+
+  @media (max-width: $desktop-sm) {
+    padding: 25px 2px;
+  }
 }
 
 .catalog__categories-link--active {
@@ -71,6 +79,10 @@
 
   @media (max-width: $desktop) {
     width: 304px;
+  }
+
+  @media (max-width: $desktop-sm) {
+    width: 287px;
   }
 }
 

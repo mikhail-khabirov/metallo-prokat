@@ -1,5 +1,9 @@
 .about-company {
   padding: 70px 0 40px;
+
+  @media (max-width: $desktop-sm) {
+    padding-top: 40px;
+  }
 }
 
 .about-company__container {
@@ -13,11 +17,19 @@
     width: 568px;
     margin-left: 116px;
   }
+
+  @media (max-width: $desktop-sm) {
+    margin-left: 0;
+  }
 }
 
 .about-company__wrappper {
   width: 470px;
   margin-left: 76px;
+
+  @media (max-width: $desktop-sm) {
+    margin-left: 40px;
+  }
 }
 
 .about-company__title {
@@ -40,4 +52,8 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1.75;
+
+  @media (max-width: $desktop-sm) {
+    margin-bottom: 15px;
+  }
 }

@@ -18,6 +18,12 @@
     max-width: 1116px;
     gap: 180px 201px;
   }
+
+  @media (max-width: $desktop-sm) {
+    gap: 80px;
+    justify-content: center;
+    max-width: 1000px;
+  }
 }
 
 .statistics__wrapper {

@@ -1,5 +1,9 @@
 .contacts {
   padding: 128px 0 97px;
+
+  @media (max-width: $desktop-sm) {
+    padding: 60px 0 60px;
+  }
 }
 
 .contacts__map {
@@ -18,6 +22,10 @@
 .contacts__wrapper {
   display: flex;
   margin-bottom: 97px;
+
+  @media (max-width: $desktop-sm) {
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__address-wrapper {
@@ -94,6 +102,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $desktop-sm) {
+    width: 950px;
+  }
 }
 
 .contacts__apply-slogan {
