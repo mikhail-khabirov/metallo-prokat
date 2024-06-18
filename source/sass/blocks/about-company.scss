@@ -8,6 +8,11 @@
 
 .about-company__container {
   display: flex;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }
 
 .about-company__image {
@@ -29,6 +34,10 @@
 
   @media (max-width: $desktop-sm) {
     margin-left: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
   }
 }
 

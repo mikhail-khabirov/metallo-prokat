@@ -43,7 +43,7 @@ mixin header(currentUrl)
             each link in headerTopLinks
               li.main-nav__item
                 a.main-nav__link(href=link.href)= link.text
-        span.header__city Екатеринбург
+        button.header__city Екатеринбург
 
     .header__bottom-container.container
       if(currentUrl === "index.html")
@@ -61,9 +61,9 @@ mixin header(currentUrl)
               a.secondary-nav__link(href=link.href)= link.text
       .header__info-for-user
         span.header__phone +7 (343) 319-19-15
-        span.header__search
+        button.header__search
           span.visually-hidden Поиск по сайту
-        span.header__cart
+        button.header__cart
           span.visually-hidden Корзина
           span.header__cart-number 1
         span.header__price 12 750 ₽

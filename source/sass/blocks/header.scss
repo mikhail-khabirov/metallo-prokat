@@ -18,6 +18,11 @@
     margin-top: 15px;
     justify-content: space-between;
   }
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .header__city {
@@ -28,6 +33,9 @@
   justify-content: space-between;
   align-items: center;
   line-height: 1.28;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 
   &::before {
     content: "";
@@ -51,6 +59,10 @@
     width: 200px;
     margin-right: 0;
   }
+
+  @media (max-width: $tablet) {
+    margin-right: 20px;
+  }
 }
 
 .header__info-for-user {
@@ -62,6 +74,11 @@
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 12px;
+  }
+
+  @media (max-width: $tablet) {
+    flex-wrap: nowrap;
+    width: 400px;
   }
 }
 
@@ -75,6 +92,10 @@
   @media (max-width: $desktop-sm) {
     margin-right: 0;
   }
+
+  @media (max-width: $tablet) {
+    margin-right: 20px;
+  }
 }
 
 .header__search {
@@ -85,6 +106,9 @@
   background-repeat: no-repeat;
   background-position: center;
   flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .header__cart {
@@ -97,6 +121,9 @@
   background-repeat: no-repeat;
   background-position: center;
   flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .header__cart-number {

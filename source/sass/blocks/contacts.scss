@@ -106,6 +106,13 @@
   @media (max-width: $desktop-sm) {
     width: 950px;
   }
+
+  @media (max-width: $tablet) {
+    width: 718px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 .contacts__apply-slogan {

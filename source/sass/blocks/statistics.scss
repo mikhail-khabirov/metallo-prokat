@@ -24,11 +24,19 @@
     justify-content: center;
     max-width: 1000px;
   }
+
+  @media (max-width: $tablet) {
+    max-width: 768px;
+  }
 }
 
 .statistics__wrapper {
   width: 238px;
   position: relative;
+
+  @media (max-width: $tablet) {
+    width: 150px;
+  }
 
   &:not(:nth-child(3n))::before {
     @include pseudo();
@@ -67,11 +75,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $tablet) {
+    font-size: 40px;
+  }
 }
 
 .statistics__greater-than {
   font-size: 36px;
   order: -1;
+
+  @media (max-width: $tablet) {
+    font-size: 25px;
+  }
 }
 
 .statistics__text {

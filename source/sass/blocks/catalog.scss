@@ -4,6 +4,10 @@
   @media (max-width: $desktop-sm) {
     padding-bottom: 60px;
   }
+
+  @media (max-width: $tablet) {
+    padding: 30px 0 30px;
+  }
 }
 
 .catalog__title {
@@ -16,6 +20,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__categories-item {
@@ -70,6 +78,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px 44px;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .catalog__products-item {
