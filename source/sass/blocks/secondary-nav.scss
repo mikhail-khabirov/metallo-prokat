@@ -16,6 +16,22 @@
     margin-right: 0;
     gap: 15px;
   }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.secondary-nav__button {
+  display: none;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  background-image: url("../img/svg/arrow-right-gray.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $var-1;
+  cursor: pointer;
 }
 
 .secondary-nav__link {
@@ -24,4 +40,8 @@
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1.28;
+
+  @media (max-width: $mobile) {
+    color: $var-2;
+  }
 }

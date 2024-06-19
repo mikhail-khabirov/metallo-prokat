@@ -22,9 +22,16 @@
     );
     /* stylelint-enable */
   }
+
+  @media (max-width: $mobile) {
+    background-image: none;
+  }
 }
 
 .page__header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-size: 100% 50;
+  @media (max-width: $mobile) {
+    position: relative;
+    top: 55px;
+    margin-top: -59px;
+  }
 }

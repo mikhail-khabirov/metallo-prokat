@@ -1,5 +1,9 @@
 .intro {
   padding: 148px 0 267px;
+
+  @media (max-width: $mobile) {
+    background-image: url("../img/images/intro-background-320.jpg");
+  }
 }
 
 .intro__title {

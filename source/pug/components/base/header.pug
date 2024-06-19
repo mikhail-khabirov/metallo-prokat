@@ -35,7 +35,7 @@ mixin header(currentUrl)
 
     ]
 
-  header.header
+  header.page__header.header.header--no-js
     .header__top-container
       .header__top-container-inner.container
         nav.main-nav
@@ -59,11 +59,19 @@ mixin header(currentUrl)
           each link in headerBottomLinks
             li.secondary-nav__item
               a.secondary-nav__link(href=link.href)= link.text
+        button.secondary-nav__button
+          span.visually-hidden Перейти в каталог продукции
       .header__info-for-user
-        span.header__phone +7 (343) 319-19-15
+        a.header__phone(href="tel:+73433191915") +7 (343) 319-19-15
         button.header__search
           span.visually-hidden Поиск по сайту
         button.header__cart
           span.visually-hidden Корзина
           span.header__cart-number 1
         span.header__price 12 750 ₽
+        button.header__toggle-button
+          .header__toggle-button-line
+          .header__toggle-button-line
+          .header__toggle-button-line
+          span.visually-hidden Открыть мобильное меню
+        button.header__button.button Оставить заявку

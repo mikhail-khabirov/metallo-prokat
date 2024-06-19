@@ -3,10 +3,19 @@
   display: flex;
   max-width: 1000px;
   gap: 52px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .main-nav__link {
   color: $primary-white;
   text-decoration: none;
   line-height: 1.28;
+
+  @media (max-width: $mobile) {
+    color: $var-2;
+  }
 }
