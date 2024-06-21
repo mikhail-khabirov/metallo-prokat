@@ -8,11 +8,57 @@
   @media (max-width: $tablet) {
     padding: 30px 0 30px;
   }
+
+  @media (max-width: $mobile) {
+    padding: 34px 0 64px;
+  }
+}
+
+.catalog__container {
+  position: relative;
 }
 
 .catalog__title {
   width: 376px;
   margin: 0 auto 40px;
+
+  @media (max-width: $mobile) {
+    width: 282px;
+    margin-bottom: 61px;
+    font-size: 24px;
+  }
+}
+
+.catalog__link {
+  margin: 0;
+  top: 3px;
+  right: 46px;
+  position: absolute;
+  width: 159px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $var-2;
+
+  @media (max-width: $tablet) {
+    right: 25px;
+  }
+
+  @media (max-width: $mobile) {
+    top: 48px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &::after {
+    @include pseudo();
+    position: static;
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/svg/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .catalog__categories {
@@ -24,11 +70,18 @@
   @media (max-width: $tablet) {
     flex-wrap: wrap;
   }
+
+  @media (max-width: $mobile) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
 }
 
 .catalog__categories-item {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 358px;
   border: 1px solid $var-3;
   text-align: center;
@@ -36,6 +89,11 @@
 
   @media (max-width: $desktop) {
     width: 265px;
+  }
+
+  @media (max-width: $mobile) {
+    width: auto;
+    flex-shrink: 0;
   }
 }
 
@@ -57,10 +115,21 @@
   @media (max-width: $desktop-sm) {
     padding: 25px 2px;
   }
+
+  @media (max-width: $mobile) {
+    padding: 13px 12px;
+    font-size: 10px;
+    line-height: 2.2;
+  }
 }
 
 .catalog__categories-link--active {
   opacity: 1;
+
+  @media (max-width: $mobile) {
+    background-color: $var-1;
+    color: $primary-white;
+  }
 
   &::before {
     content: "";
@@ -70,6 +139,10 @@
     height: 5px;
     width: 100%;
     background-color: $var-1;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 
@@ -81,6 +154,12 @@
 
   @media (max-width: $tablet) {
     justify-content: center;
+  }
+
+  @media (max-width: $mobile) {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 
@@ -95,6 +174,11 @@
 
   @media (max-width: $desktop-sm) {
     width: 287px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 258px;
+    flex-shrink: 0;
   }
 }
 
@@ -115,6 +199,10 @@
     background-color: $var-1;
     bottom: 0;
     left: 0;
+
+    @media (max-width: $mobile) {
+      width: 15px;
+    }
   }
 
   &::before {

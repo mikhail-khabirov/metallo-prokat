@@ -5,6 +5,10 @@
   text-transform: uppercase;
   color: $var-2;
 
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
+
   &::after {
     content: "";
     position: absolute;

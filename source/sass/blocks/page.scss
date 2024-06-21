@@ -31,7 +31,21 @@
 .page__header {
   @media (max-width: $mobile) {
     position: relative;
+    z-index: 1;
     top: 55px;
     margin-top: -59px;
+  }
+}
+
+.page__main {
+  position: relative;
+}
+
+.page__statistics {
+  @media (max-width: $mobile) {
+    position: absolute;
+    left: 50%;
+    bottom: 1105px;
+    transform: translateX(-50%);
   }
 }

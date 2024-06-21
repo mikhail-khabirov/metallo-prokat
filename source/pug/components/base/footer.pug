@@ -58,11 +58,15 @@ mixin footer()
       .footer__company-wrapper
         .footer__company-info
           if(currentUrl === "index.html")
-            span.logo
-              +img("logo__image", "images", "logo","png", "231", "60", "Логотип Сталь Урала." )
+            span.footer__logo.logo
+              picture
+                source(media="(max-width: 767px)", srcset="/img/svg/logo-green.svg 1x")
+                +img("logo__image", "images", "logo","png", "231", "60", "Логотип Сталь Урала." )
           else
-            a.logo(href="index.html" aria-label="Переход на главную")
-              +img("logo__image", "images", "logo","png", "231", "60", "Логотип Сталь Урала." )
+            a.footer__logo.logo(href="index.html" aria-label="Переход на главную")
+              picture
+                source(media="(max-width: 767px)", srcset="/img/svg/logo-green.svg 1x")
+                +img("logo__image", "images", "logo","png", "231", "60", "Логотип Сталь Урала." )
           p.footer__address 620010, г. Екатеринбург, ЕКАД 5 км, строение № 6В, помещение № 311.
           span.footer__phone 8 (343) 319-19-15
           span.footer__email info@stalurala.ru

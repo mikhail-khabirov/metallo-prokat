@@ -1,8 +1,13 @@
 .contacts {
+  overflow: hidden;
   padding: 128px 0 97px;
 
   @media (max-width: $desktop-sm) {
     padding: 60px 0 60px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 64px 0 64px;
   }
 }
 
@@ -12,11 +17,22 @@
     height: 454px;
     object-fit: cover;
   }
+
+  @media (max-width: $mobile) {
+    height: 229px;
+    min-width: 100vw;
+    margin-left: -20px;
+  }
 }
 
 .contacts__title {
   margin: 0 auto 40px;
   width: 185px;
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    margin-bottom: 47px;
+  }
 }
 
 .contacts__wrapper {
@@ -26,12 +42,22 @@
   @media (max-width: $desktop-sm) {
     margin-bottom: 60px;
   }
+
+  @media (max-width: $mobile) {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 64px;
+  }
 }
 
 .contacts__address-wrapper {
   margin: 43px 0 0 44px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $mobile) {
+    margin: 0;
+  }
 }
 
 .contacts__address-title {
@@ -40,6 +66,11 @@
   font-weight: 500;
   color: $primary-black;
   line-height: 1.2;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
 }
 
 .contacts__address {
@@ -47,6 +78,12 @@
   margin: 0 0 25px;
   font-size: 16px;
   line-height: 1.5;
+
+  @media (max-width: $mobile) {
+    width: 280px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
 }
 
 .contacts__phone {
@@ -55,13 +92,17 @@
   align-items: center;
   margin-bottom: 25px;
 
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
+
   &::before {
     @include pseudo();
     position: static;
     margin-right: 16px;
     width: 28px;
     height: 28px;
-    background-image: url("../img/svg/phone.svg");
+    background-image: url("../img/svg/phone-gray.svg");
   }
 }
 
@@ -70,6 +111,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
 
   &::before {
     @include pseudo();
@@ -85,6 +130,10 @@
   line-height: 1.71;
   display: flex;
   align-items: center;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 
   &::before {
     @include pseudo();
@@ -113,6 +162,10 @@
     justify-content: center;
     gap: 20px;
   }
+
+  @media (max-width: $mobile) {
+    width: 280px;
+  }
 }
 
 .contacts__apply-slogan {
@@ -123,10 +176,21 @@
   line-height: 1.28;
   text-transform: uppercase;
   color: $var-1;
+
+  @media (max-width: $mobile) {
+    width: 260px;
+    font-size: 24px;
+    line-height: 1.71;
+    text-align: center;
+  }
 }
 
 .contacts__apply-text {
   margin: 0;
   line-height: 1.43;
   width: 290px;
+
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
 }

@@ -4,6 +4,10 @@
   @media (max-width: $desktop-sm) {
     padding-top: 40px;
   }
+
+  @media (max-width: $mobile) {
+    padding: 64px 0 84px;
+  }
 }
 
 .about-company__container {
@@ -12,6 +16,10 @@
   @media (max-width: $tablet) {
     flex-wrap: wrap-reverse;
     justify-content: center;
+  }
+
+  @media (max-width: $mobile) {
+    width: 280px;
   }
 }
 
@@ -26,6 +34,12 @@
   @media (max-width: $desktop-sm) {
     margin-left: 0;
   }
+
+  @media (max-width: $mobile) {
+    width: 280px;
+    height: 206px;
+    object-fit: cover;
+  }
 }
 
 .about-company__wrappper {
@@ -39,6 +53,12 @@
   @media (max-width: $tablet) {
     margin-bottom: 30px;
   }
+
+  @media (max-width: $mobile) {
+    position: relative;
+    margin: 0;
+    width: 280px;
+  }
 }
 
 .about-company__title {
@@ -48,11 +68,26 @@
   font-weight: 500;
   text-transform: none;
 
+  @media (max-width: $mobile) {
+    margin: 0 auto 42px;
+    padding-right: 0;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   &::after {
     top: 50%;
     left: unset;
-    transform: translateY(-50%), rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     right: 0;
+
+    @media (max-width: $mobile) {
+      top: unset;
+      right: 50%;
+      bottom: -9px;
+      transform: translateX(50%) rotate(45deg);
+    }
   }
 }
 
@@ -62,7 +97,16 @@
   font-weight: 500;
   line-height: 1.75;
 
-  @media (max-width: $desktop-sm) {
-    margin-bottom: 15px;
+  @media (max-width: $mobile) {
+    margin-bottom: 205px;
+  }
+}
+
+.about-company__button {
+  @media (max-width: $mobile) {
+    position: absolute;
+    bottom: -290px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

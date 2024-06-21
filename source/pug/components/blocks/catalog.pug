@@ -71,8 +71,9 @@ mixin catalog()
     ]
 
   section.catalog
-    .container
+    .catalog__container.container
       h2.catalog__title.title Каталог продукции
+      a.catalog__link(href="#!") Перейти в каталог
       ul.catalog__categories
         each link in catalogCategories
           - const activeState = link.active === true
