@@ -1,0 +1,33 @@
+mixin modal()
+  .modal
+    .modal__window
+      h2.modal__title Рассчитаем стоимость вашего заказа
+      p.modal__text Оставьте нам свои данные, и наши специалисты свяжутся с вами в ближайшее время
+      form.modal__form(name="client-form")
+        .modal__form-group
+          input.modal__form-input(name="clients-name" id="name" type="text" placeholder="")
+          label.modal__form-label(for="name") ФИО
+          svg.modal__form-icon
+            use(xlink:href="./img/sprite.svg#form-user")
+        .modal__form-group
+          input.modal__form-input(name="clients-phone" id="phone" type="phone" placeholder="")
+          label.modal__form-label(for="phone") Телефон
+          svg.modal__form-icon
+            use(xlink:href="./img/sprite.svg#form-phone")
+        .modal__form-group
+          input.modal__form-input(name="clients-email" id="email" type="email" placeholder="")
+          label.modal__form-label(for="email") Email
+          svg.modal__form-icon
+            use(xlink:href="./img/sprite.svg#form-email")
+        .modal__form-group
+          textarea.modal__form-text-area(name="clients-comment" id="comment" placeholder="")
+          label.modal__form-label(for="comment") Комментарий
+          svg.modal__form-icon
+            use(xlink:href="./img/sprite.svg#form-comment")
+        label.modal__form-label-checkbox
+          input.modal__checkbox.visually-hidden(name="policy" type="checkbox" checked)
+          | Я согласен на обработку #[a.modal__personal-data(href="#") персональных данных]
+        button.modal__button.button(type="submit") Отправить заявку
+        button.modal__close-button(type="button")
+          span.visually-hidden Закрыть окно
+

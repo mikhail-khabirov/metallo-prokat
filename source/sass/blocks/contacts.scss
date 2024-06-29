@@ -91,6 +91,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  font-family: "Mulish", "Arial", sans-serif;
+  font-weight: 400;
+  color: #141c1a;
+  text-decoration: none;
 
   @media (max-width: $mobile) {
     margin-bottom: 20px;
@@ -130,6 +134,10 @@
   line-height: 1.71;
   display: flex;
   align-items: center;
+  font-family: "Mulish", "Arial", sans-serif;
+  font-weight: 400;
+  color: #141c1a;
+  text-decoration: none;
 
   @media (max-width: $mobile) {
     margin-bottom: 30px;

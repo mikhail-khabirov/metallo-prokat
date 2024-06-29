@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  height: 58px;
 
   @media (max-width: $mobile) {
     padding: 24px 0 0;
@@ -14,8 +15,9 @@
       top: 59px;
       left: 0;
       width: 100%;
-      z-index: 1;
+      z-index: 2;
       box-shadow: 3px 3px 5px $var-3;
+      transition: height 0.5s linear;
 
       .header__top-container {
         padding-bottom: 10px;

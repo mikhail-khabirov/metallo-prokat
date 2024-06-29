@@ -68,8 +68,8 @@ mixin footer()
                 source(media="(max-width: 767px)", srcset="/img/svg/logo-green.svg 1x")
                 +img("logo__image", "images", "logo","png", "231", "60", "Логотип Сталь Урала." )
           p.footer__address 620010, г. Екатеринбург, ЕКАД 5 км, строение № 6В, помещение № 311.
-          span.footer__phone 8 (343) 319-19-15
-          span.footer__email info@stalurala.ru
+          a.footer__phone(href="tel:+73433191915") 8 (343) 319-19-15
+          a.footer__email(href="mailto:info@stalurala.ru") info@stalurala.ru
           a.footer__vk(href="#")
             span.visually-hidden Перейти в ВК
           span.footer__copyright ©2024, Сталь Урала
@@ -98,5 +98,5 @@ mixin footer()
                 each item in services
                   li.footer__links-item
                     a.footer__links-link(href="")= item.name
-            button.footer__button.button.button--secondary заказать звонок
+            button.footer__button.button.button--secondary(type="button") заказать звонок
           a.footer__policy(href="#") Политика конфиденциальности

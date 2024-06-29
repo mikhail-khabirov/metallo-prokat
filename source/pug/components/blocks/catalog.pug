@@ -7,7 +7,8 @@ mixin catalog()
       },
       {
         active: false,
-        text: "Заборы и ограждения"
+        text: "Заборы и ограждения",
+        smallerText: true
       },
       {
         active: false,
@@ -74,15 +75,18 @@ mixin catalog()
     .catalog__container.container
       h2.catalog__title.title Каталог продукции
       a.catalog__link(href="#!") Перейти в каталог
-      ul.catalog__categories
+      ul.catalog__categories.owl-carousel.slide-one.owl-theme
         each link in catalogCategories
           - const activeState = link.active === true
+          - const smallerText = link.smallerText === true
           li.catalog__categories-item
             if(activeState)
               a.catalog__categories-link.catalog__categories-link--active(href="#")= link.text
+            else if (smallerText)
+              a.catalog__categories-link.catalog__categories-link--smaller-text(href="#")= link.text
             else
               a.catalog__categories-link(href="#")= link.text
-      ul.catalog__products
+      ul.catalog__products.owl-carousel.slide-two.owl-theme
         each item in catalogItems
           li.catalog__products-item
             +img("catalog__image", "images", item.name, "jpg", "424", "227", "")

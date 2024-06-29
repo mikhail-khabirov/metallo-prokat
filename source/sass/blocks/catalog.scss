@@ -23,7 +23,7 @@
   margin: 0 auto 40px;
 
   @media (max-width: $mobile) {
-    width: 282px;
+    width: 285px;
     margin-bottom: 61px;
     font-size: 24px;
   }
@@ -73,7 +73,7 @@
 
   @media (max-width: $mobile) {
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow: hidden;
     justify-content: flex-start;
   }
 }
@@ -93,7 +93,6 @@
 
   @media (max-width: $mobile) {
     width: auto;
-    flex-shrink: 0;
   }
 }
 
@@ -120,6 +119,11 @@
     padding: 13px 12px;
     font-size: 10px;
     line-height: 2.2;
+
+    &--smaller-text {
+      font-size: 8px;
+      line-height: 2.8;
+    }
   }
 }
 
@@ -157,7 +161,7 @@
   }
 
   @media (max-width: $mobile) {
-    overflow-x: scroll;
+    overflow: hidden;
     flex-wrap: nowrap;
     justify-content: flex-start;
   }

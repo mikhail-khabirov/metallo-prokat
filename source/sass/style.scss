@@ -6,6 +6,11 @@
 @import "./base/fonts.scss";
 @import "./base/base.scss";
 
+// Vendor
+
+@import "./vendor/owl.carousel.scss";
+@import "./vendor/owl.theme.default.scss";
+
 // Blocks
 @import "./blocks/button.scss";
 @import "./blocks/container.scss";
@@ -22,3 +27,4 @@
 @import "./blocks/statistics.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/footer.scss";
+@import "./blocks/modal.scss";
